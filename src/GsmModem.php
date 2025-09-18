@@ -11,7 +11,6 @@ use Iamgerwin\GsmModem\Enums\MessageStatus;
 use Iamgerwin\GsmModem\Enums\SmsMode;
 use Iamgerwin\GsmModem\Helpers\PduHelper;
 use Iamgerwin\GsmModem\Models\SmsMessage;
-use Illuminate\Support\Collection;
 
 class GsmModem implements ModemInterface
 {

@@ -257,7 +257,7 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## Security
 
-If you discover any security related issues, please email gerwin@example.com instead of using the issue tracker.
+If you discover any security related issues, please email iamgerwin@live.com instead of using the issue tracker.
 
 ## Credits
 
