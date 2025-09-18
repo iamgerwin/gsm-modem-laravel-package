@@ -77,7 +77,7 @@ class GsmModemMonitorCommand extends Command
         $this->line('----------------------------');
     }
 
-    private function handleSignal(int $signal): void
+    public function handleSignal(int $signal): void
     {
         $this->shouldStop = true;
     }
