@@ -1,0 +1,80 @@
+{
+    "name": "iamgerwin/gsm-modem",
+    "description": "Laravel package for GSM modem communication - Send SMS, make calls, USSD and more",
+    "keywords": [
+        "laravel",
+        "gsm",
+        "modem",
+        "sms",
+        "at-commands",
+        "serial",
+        "ussd",
+        "pdu"
+    ],
+    "homepage": "https://github.com/iamgerwin/gsm-modem-laravel-package",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Gerwin",
+            "email": "gerwin@example.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.3",
+        "spatie/laravel-package-tools": "^1.16",
+        "illuminate/contracts": "^11.0||^12.0"
+    },
+    "require-dev": {
+        "laravel/pint": "^1.14",
+        "nunomaduro/collision": "^8.8",
+        "larastan/larastan": "^3.0",
+        "orchestra/testbench": "^10.0.0||^9.0.0",
+        "pestphp/pest": "^4.0",
+        "pestphp/pest-plugin-arch": "^4.0",
+        "pestphp/pest-plugin-laravel": "^4.0",
+        "phpstan/extension-installer": "^1.4",
+        "phpstan/phpstan-deprecation-rules": "^2.0",
+        "phpstan/phpstan-phpunit": "^2.0",
+        "spatie/laravel-ray": "^1.35"
+    },
+    "autoload": {
+        "psr-4": {
+            "Iamgerwin\\GsmModem\\": "src/",
+            "Iamgerwin\\GsmModem\\Database\\Factories\\": "database/factories/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Iamgerwin\\GsmModem\\Tests\\": "tests/",
+            "Workbench\\App\\": "workbench/app/"
+        }
+    },
+    "scripts": {
+        "post-autoload-dump": "@composer run prepare",
+        "prepare": "@php vendor/bin/testbench package:discover --ansi",
+        "analyse": "vendor/bin/phpstan analyse",
+        "test": "vendor/bin/pest",
+        "test-coverage": "vendor/bin/pest --coverage",
+        "format": "vendor/bin/pint"
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true,
+            "phpstan/extension-installer": true
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Iamgerwin\\GsmModem\\GsmModemServiceProvider"
+            ],
+            "aliases": {
+                "GsmModem": "Iamgerwin\\GsmModem\\Facades\\GsmModem"
+            }
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
